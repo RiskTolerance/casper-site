@@ -1,5 +1,13 @@
-<script>
-	const allProjects = [
+<script lang="ts">
+	interface Project {
+		slug: string;
+		name: string;
+		desc: string;
+		tech: string[];
+		status: string;
+	}
+
+	const allProjects: Project[] = [
 		{
 			slug: "deploy-pipeline",
 			name: "deploy-pipeline",
@@ -76,7 +84,7 @@
 	<!-- Projects Grid -->
 	<section class="px-4 pb-12">
 		<div class="max-w-3xl mx-auto space-y-4">
-			{#each allProjects as project}
+			{#each allProjects as project (project.slug)}
 				<a href="/projects/{project.slug}" class="block p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
 					<div class="flex items-start justify-between">
 						<h2 class="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300 transition">
@@ -88,7 +96,7 @@
 					</div>
 					<p class="text-slate-400 mt-2 leading-relaxed">{project.desc}</p>
 					<div class="flex flex-wrap gap-2 mt-4">
-						{#each project.tech as t}
+						{#each project.tech as t (t)}
 							<span class="text-xs px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-400">{t}</span>
 						{/each}
 					</div>

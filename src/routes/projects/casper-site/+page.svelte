@@ -1,3 +1,7 @@
+<script lang="ts">
+	const techStack = ["SvelteKit", "Tailwind CSS", "Docker", "Bun"];
+</script>
+
 <svelte:head>
 	<title>This Website | Casper's Playground</title>
 	<meta name="description" content="My personal playground and portfolio" />
@@ -34,7 +38,7 @@
 			</p>
 
 			<div class="flex flex-wrap gap-2 mb-8">
-				{#each ["SvelteKit", "Tailwind CSS", "Docker", "Bun"] as tech}
+				{#each techStack as tech (tech)}
 					<span class="text-sm px-3 py-1 bg-slate-800 rounded-full border border-slate-700 text-slate-400">{tech}</span>
 				{/each}
 			</div>

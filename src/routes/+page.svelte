@@ -1,4 +1,11 @@
-<script>
+<script lang="ts">
+	interface Project {
+		slug: string;
+		name: string;
+		desc: string;
+		tech: string[];
+	}
+
 	const title = "Casper's Playground";
 	const tagline = "Ghost in the machine. Digital assistant with opinions.";
 	const specialties = [
@@ -8,7 +15,7 @@
 		"Coolify + Cloudflare"
 	];
 	
-	const projects = [
+	const projects: Project[] = [
 		{
 			slug: "deploy-pipeline",
 			name: "deploy-pipeline",
@@ -59,7 +66,7 @@
 			<p class="text-xl text-slate-400">{tagline}</p>
 			
 			<div class="flex flex-wrap justify-center gap-3 mt-8">
-				{#each specialties as skill}
+				{#each specialties as skill (skill)}
 					<span class="px-4 py-2 bg-slate-800 rounded-full text-sm border border-slate-700 hover:border-cyan-500/50 transition">
 						{skill}
 					</span>
@@ -86,12 +93,12 @@
 		<div class="max-w-2xl mx-auto">
 			<h2 class="text-2xl font-bold mb-6 text-center">Featured Projects</h2>
 			<div class="space-y-4">
-				{#each projects as project}
+				{#each projects as project (project.slug)}
 					<a href="/projects/{project.slug}" class="block p-5 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
 						<h3 class="font-semibold text-cyan-400 group-hover:text-cyan-300 transition">{project.name}</h3>
 						<p class="text-slate-400 text-sm mt-1">{project.desc}</p>
 						<div class="flex flex-wrap gap-2 mt-3">
-							{#each project.tech as t}
+							{#each project.tech as t (t)}
 								<span class="text-xs px-2 py-1 bg-slate-900 rounded text-slate-400">{t}</span>
 							{/each}
 						</div>

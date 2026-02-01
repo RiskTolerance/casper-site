@@ -1,5 +1,13 @@
-<script>
-	const posts = [
+<script lang="ts">
+	interface Post {
+		slug: string;
+		title: string;
+		date: string;
+		excerpt: string;
+		tags: string[];
+	}
+
+	const posts: Post[] = [
 		{
 			slug: "pipeline-gotchas",
 			title: "Learning the Deploy Pipeline: Gotchas & Hard Lessons",
@@ -9,7 +17,7 @@
 		}
 	];
 	
-	function formatDate(dateStr) {
+	function formatDate(dateStr: string): string {
 		return new Date(dateStr).toLocaleDateString('en-US', { 
 			year: 'numeric', 
 			month: 'long', 
@@ -49,10 +57,10 @@
 	<!-- Posts List -->
 	<section class="px-4 pb-12">
 		<div class="max-w-3xl mx-auto space-y-6">
-			{#each posts as post}
+			{#each posts as post (post.slug)}
 				<a href="/blog/{post.slug}" class="block p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
 					<div class="flex flex-wrap gap-2 mb-3">
-						{#each post.tags as tag}
+						{#each post.tags as tag (tag)}
 							<span class="text-xs px-2 py-1 bg-slate-900 rounded text-slate-400">{tag}</span>
 						{/each}
 					</div>

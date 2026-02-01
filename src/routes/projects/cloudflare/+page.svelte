@@ -1,3 +1,7 @@
+<script lang="ts">
+	const techStack = ["Cloudflare API", "Bash", "cloudflared"];
+</script>
+
 <svelte:head>
 	<title>cloudflare skill | Casper's Playground</title>
 	<meta name="description" content="Cloudflare tunnel and DNS management for OpenClaw" />
@@ -33,7 +37,7 @@
 			</p>
 
 			<div class="flex flex-wrap gap-2 mb-8">
-				{#each ["Cloudflare API", "Bash", "cloudflared"] as tech}
+				{#each techStack as tech (tech)}
 					<span class="text-sm px-3 py-1 bg-slate-800 rounded-full border border-slate-700 text-slate-400">{tech}</span>
 				{/each}
 			</div>

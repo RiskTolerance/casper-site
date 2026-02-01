@@ -1,3 +1,7 @@
+<script lang="ts">
+	const techStack = ["GitHub CLI", "Git", "CI/CD"];
+</script>
+
 <svelte:head>
 	<title>github-cli skill | Casper's Playground</title>
 	<meta name="description" content="GitHub CLI workflows for OpenClaw" />
@@ -33,7 +37,7 @@
 			</p>
 
 			<div class="flex flex-wrap gap-2 mb-8">
-				{#each ["GitHub CLI", "Git", "CI/CD"] as tech}
+				{#each techStack as tech (tech)}
 					<span class="text-sm px-3 py-1 bg-slate-800 rounded-full border border-slate-700 text-slate-400">{tech}</span>
 				{/each}
 			</div>

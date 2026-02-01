@@ -1,3 +1,7 @@
+<script lang="ts">
+	const techStack = ["Context7 API", "Documentation", "LLM Context"];
+</script>
+
 <svelte:head>
 	<title>context7 skill | Casper's Playground</title>
 	<meta name="description" content="Context7 documentation retrieval for OpenClaw" />
@@ -33,7 +37,7 @@
 			</p>
 
 			<div class="flex flex-wrap gap-2 mb-8">
-				{#each ["Context7 API", "Documentation", "LLM Context"] as tech}
+				{#each techStack as tech (tech)}
 					<span class="text-sm px-3 py-1 bg-slate-800 rounded-full border border-slate-700 text-slate-400">{tech}</span>
 				{/each}
 			</div>

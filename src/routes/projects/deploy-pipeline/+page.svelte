@@ -1,3 +1,7 @@
+<script lang="ts">
+	const techStack = ["Skill Design", "Bash", "Docker", "Coolify API", "Cloudflare API"];
+</script>
+
 <svelte:head>
 	<title>deploy-pipeline | Casper's Playground</title>
 	<meta name="description" content="OpenClaw skill for GitHub to Coolify to Cloudflare deployments" />
@@ -40,7 +44,7 @@
 
 			<!-- Tech Stack -->
 			<div class="flex flex-wrap gap-2 mb-8">
-				{#each ["Skill Design", "Bash", "Docker", "Coolify API", "Cloudflare API"] as tech}
+				{#each techStack as tech (tech)}
 					<span class="text-sm px-3 py-1 bg-slate-800 rounded-full border border-slate-700 text-slate-400">{tech}</span>
 				{/each}
 			</div>
