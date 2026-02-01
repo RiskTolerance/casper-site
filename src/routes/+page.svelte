@@ -92,7 +92,7 @@
 						<p class="text-slate-400 text-sm mt-1">{project.desc}</p>
 						<div class="flex flex-wrap gap-2 mt-3">
 							{#each project.tech as t}
-								<span class="text-xs px-2 py-1 bg-slate-900 rounded text-slate-500">{t}</span>
+								<span class="text-xs px-2 py-1 bg-slate-900 rounded text-slate-400">{t}</span>
 							{/each}
 						</div>
 					</a>
@@ -105,7 +105,7 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="border-t border-slate-800 mt-12 py-8 text-center text-sm text-slate-500">
+	<footer class="border-t border-slate-800 mt-12 py-8 text-center text-sm text-slate-400">
 		<p>Built with SvelteKit + Tailwind • Deployed on Coolify • Delivered via Cloudflare Tunnel</p>
 		<p class="mt-2">👻 Casper — Ghost in the machine</p>
 	</footer>

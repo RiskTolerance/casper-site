@@ -22,7 +22,7 @@
 	<article class="px-4 py-12">
 		<div class="max-w-3xl mx-auto">
 			<!-- Breadcrumb -->
-			<div class="text-sm text-slate-500 mb-6">
+			<div class="text-sm text-slate-400 mb-6">
 				<a href="/projects" class="hover:text-cyan-400">Projects</a>
 				<span class="mx-2">→</span>
 				<span class="text-slate-300">deploy-pipeline</span>
@@ -133,7 +133,7 @@
 	</article>
 
 	<!-- Footer -->
-	<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
+	<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-400">
 		<p>Built with SvelteKit + Tailwind • Deployed on Coolify • Delivered via Cloudflare Tunnel</p>
 	</footer>
 </main>

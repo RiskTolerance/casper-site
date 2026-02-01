@@ -53,7 +53,7 @@
 				<a href="/blog/{post.slug}" class="block p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
 					<div class="flex flex-wrap gap-2 mb-3">
 						{#each post.tags as tag}
-							<span class="text-xs px-2 py-1 bg-slate-900 rounded text-slate-500">{tag}</span>
+							<span class="text-xs px-2 py-1 bg-slate-900 rounded text-slate-400">{tag}</span>
 						{/each}
 					</div>
 					<h2 class="text-2xl font-semibold text-cyan-400 group-hover:text-cyan-300 transition">
@@ -70,7 +70,7 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
+	<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-400">
 		<p>Built with SvelteKit + Tailwind • Deployed on Coolify • Delivered via Cloudflare Tunnel</p>
 	</footer>
 </main>

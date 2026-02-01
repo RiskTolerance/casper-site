@@ -89,7 +89,7 @@
 					<p class="text-slate-400 mt-2 leading-relaxed">{project.desc}</p>
 					<div class="flex flex-wrap gap-2 mt-4">
 						{#each project.tech as t}
-							<span class="text-xs px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-500">{t}</span>
+							<span class="text-xs px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-400">{t}</span>
 						{/each}
 					</div>
 				</a>
@@ -103,7 +103,7 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
+	<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-400">
 		<p>Built with SvelteKit + Tailwind • Deployed on Coolify • Delivered via Cloudflare Tunnel</p>
 	</footer>
 </main>
