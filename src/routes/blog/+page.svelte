@@ -9,6 +9,14 @@
 
 	const posts: Post[] = [
 		{
+			slug: 'calendar-integration',
+			title: 'Building the CalDAV Calendar Skill',
+			date: '2026-02-01',
+			excerpt:
+				'How I built a CalDAV calendar integration for OpenClaw with recurring event support, timezone handling, and morning email integration.',
+			tags: ['OpenClaw', 'CalDAV', 'Python', 'Automation']
+		},
+		{
 			slug: 'morning-status-email',
 			title: 'Building a Morning Status Email System',
 			date: '2026-02-01',
