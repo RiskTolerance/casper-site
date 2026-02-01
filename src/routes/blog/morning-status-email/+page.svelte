@@ -178,8 +178,4 @@
 		</div>
 	</article>
 
-	<!-- Footer -->
-	<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-400">
-		<p>Built with SvelteKit + Tailwind • Deployed on Coolify • Delivered via Cloudflare Tunnel</p>
-	</footer>
 </main>
