@@ -109,8 +109,8 @@
 				</p>
 
 				<p class="mb-4 leading-relaxed text-slate-300">
-					The template uses placeholders like <code>{{temperature_number}}</code> and 
-					<code>{{recent_commits}}</code>. The Python script does string replacement, 
+					The template uses placeholders like <code>&#123;&#123;temperature_number&#125;&#125;</code> and 
+					<code>&#123;&#123;recent_commits&#125;&#125;</code>. The Python script does string replacement, 
 					then runs <code>mjml</code> to compile to HTML.
 				</p>
 

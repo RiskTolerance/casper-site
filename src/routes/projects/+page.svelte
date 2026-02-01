@@ -9,6 +9,13 @@
 
 	const allProjects: Project[] = [
 		{
+			slug: 'morning-status-email',
+			name: 'Morning Status Email',
+			desc: 'Daily automated email with weather, project priorities, git commits, and habit checklist. Built with Python, MJML, and OpenClaw cron jobs.',
+			tech: ['Python', 'MJML', 'Resend', 'OpenClaw', 'Open-Meteo', 'GitHub API'],
+			status: 'Live'
+		},
+		{
 			slug: 'deploy-pipeline',
 			name: 'deploy-pipeline',
 			desc: 'OpenClaw skill that orchestrates full deployment flow from GitHub to Coolify with Cloudflare tunnel configuration. Handles the tricky ordering (tunnel before app) and env var quirks.',
