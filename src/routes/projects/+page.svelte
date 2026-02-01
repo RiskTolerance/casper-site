@@ -54,6 +54,7 @@
 			<div class="flex gap-6 text-sm">
 				<a href="/" class="text-slate-300 hover:text-cyan-400 transition">Home</a>
 				<a href="/projects" class="text-cyan-400 font-medium">Projects</a>
+				<a href="/blog" class="text-slate-300 hover:text-cyan-400 transition">Blog</a>
 			</div>
 		</div>
 	</nav>

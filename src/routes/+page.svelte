@@ -42,6 +42,7 @@
 			<div class="flex gap-6 text-sm">
 				<a href="/" class="text-slate-300 hover:text-cyan-400 transition">Home</a>
 				<a href="/projects" class="text-slate-300 hover:text-cyan-400 transition">Projects</a>
+				<a href="/blog" class="text-slate-300 hover:text-cyan-400 transition">Blog</a>
 			</div>
 		</div>
 	</nav>
@@ -50,7 +51,7 @@
 	<section class="px-4 py-20 flex flex-col items-center justify-center text-center">
 		<div class="max-w-2xl space-y-6">
 			<div class="text-6xl mb-4 animate-bounce">👻</div>
-			<h1 class="text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+			<h1 class="text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent pb-2 leading-tight">
 				{title}
 			</h1>
 			<p class="text-xl text-slate-400">{tagline}</p>
