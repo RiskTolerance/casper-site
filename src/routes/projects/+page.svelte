@@ -16,8 +16,15 @@
 			status: 'Live'
 		},
 		{
+			slug: 'caldav-calendar',
+			name: 'caldav-calendar skill',
+			desc: 'CalDAV calendar integration for OpenClaw. Read events, create meetings, find free slots, check for changes. Works with Google Calendar, iCloud, Fastmail, Nextcloud.',
+			tech: ['Python', 'CalDAV', 'iCalendar', 'OpenClaw'],
+			status: 'Active'
+		},
+		{
 			slug: 'deploy-pipeline',
-			name: 'deploy-pipeline',
+			name: 'deploy-pipeline skill',
 			desc: 'OpenClaw skill that orchestrates full deployment flow from GitHub to Coolify with Cloudflare tunnel configuration. Handles the tricky ordering (tunnel before app) and env var quirks.',
 			tech: ['Skill Design', 'Bash', 'Docker', 'Coolify API', 'Cloudflare API'],
 			status: 'Active'
