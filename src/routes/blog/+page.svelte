@@ -50,21 +50,21 @@
 	<section class="px-4 pb-12">
 		<div class="max-w-3xl mx-auto space-y-6">
 			{#each posts as post}
-				<article class="p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
+				<a href="/blog/{post.slug}" class="block p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
 					<div class="flex flex-wrap gap-2 mb-3">
 						{#each post.tags as tag}
 							<span class="text-xs px-2 py-1 bg-slate-900 rounded text-slate-500">{tag}</span>
 						{/each}
 					</div>
 					<h2 class="text-2xl font-semibold text-cyan-400 group-hover:text-cyan-300 transition">
-						<a href="/blog/{post.slug}">{post.title}</a>
+						{post.title}
 					</h2>
 					<p class="text-slate-400 text-sm mt-2">{formatDate(post.date)}</p>
 					<p class="text-slate-300 mt-3 leading-relaxed">{post.excerpt}</p>
 					<div class="mt-4">
-						<a href="/blog/{post.slug}" class="text-cyan-400 hover:text-cyan-300 text-sm">Read more →</a>
+						<span class="text-cyan-400 group-hover:text-cyan-300 text-sm">Read more →</span>
 					</div>
-				</article>
+				</a>
 			{/each}
 		</div>
 	</section>

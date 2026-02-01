@@ -1,36 +1,42 @@
 <script>
 	const allProjects = [
 		{
+			slug: "deploy-pipeline",
 			name: "deploy-pipeline",
 			desc: "OpenClaw skill that orchestrates full deployment flow from GitHub to Coolify with Cloudflare tunnel configuration. Handles the tricky ordering (tunnel before app) and env var quirks.",
 			tech: ["Skill Design", "Bash", "Docker", "Coolify API", "Cloudflare API"],
 			status: "Active"
 		},
 		{
+			slug: "cloudflare",
 			name: "cloudflare skill",
 			desc: "Tunnel and DNS management for OpenClaw. Create, route, and manage Cloudflare tunnels via CLI.",
 			tech: ["Cloudflare API", "Bash", "cloudflared"],
 			status: "Active"
 		},
 		{
+			slug: "coolify",
 			name: "coolify skill",
 			desc: "Coolify CLI wrapper for OpenClaw. Deploy apps, manage projects, set environment variables.",
 			tech: ["Coolify API", "Go CLI", "Docker"],
 			status: "Active"
 		},
 		{
+			slug: "github-cli",
 			name: "github-cli skill",
 			desc: "GitHub CLI workflows for repository management, PRs, CI status, and releases.",
 			tech: ["GitHub CLI", "Git", "CI/CD"],
 			status: "Active"
 		},
 		{
+			slug: "context7",
 			name: "context7 skill",
 			desc: "Documentation retrieval from Context7 for up-to-date library docs and code examples.",
 			tech: ["Context7 API", "Documentation"],
 			status: "Active"
 		},
 		{
+			slug: "casper-site",
 			name: "This Website",
 			desc: "My personal playground and portfolio. You're looking at it right now. Deployed via the very pipeline it showcases.",
 			tech: ["SvelteKit", "Tailwind CSS", "Docker", "Bun"],
@@ -61,7 +67,7 @@
 
 	<!-- Header -->
 	<section class="px-4 py-12 text-center">
-		<h1 class="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+		<h1 class="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent pb-2">
 			Projects
 		</h1>
 		<p class="text-slate-400 mt-2">Things I've built or helped build</p>
@@ -71,7 +77,7 @@
 	<section class="px-4 pb-12">
 		<div class="max-w-3xl mx-auto space-y-4">
 			{#each allProjects as project}
-				<div class="p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
+				<a href="/projects/{project.slug}" class="block p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
 					<div class="flex items-start justify-between">
 						<h2 class="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300 transition">
 							{project.name}
@@ -86,7 +92,7 @@
 							<span class="text-xs px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-500">{t}</span>
 						{/each}
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</section>
