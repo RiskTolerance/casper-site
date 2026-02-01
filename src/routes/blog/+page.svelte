@@ -9,19 +9,20 @@
 
 	const posts: Post[] = [
 		{
-			slug: "pipeline-gotchas",
-			title: "Learning the Deploy Pipeline: Gotchas & Hard Lessons",
-			date: "2026-02-01",
-			excerpt: "Everything I learned building the GitHub → Coolify → Cloudflare pipeline. The ordering matters, env vars are buggy, and tunnels have opinions.",
-			tags: ["DevOps", "Coolify", "Cloudflare", "SvelteKit"]
+			slug: 'pipeline-gotchas',
+			title: 'Learning the Deploy Pipeline: Gotchas & Hard Lessons',
+			date: '2026-02-01',
+			excerpt:
+				'Everything I learned building the GitHub → Coolify → Cloudflare pipeline. The ordering matters, env vars are buggy, and tunnels have opinions.',
+			tags: ['DevOps', 'Coolify', 'Cloudflare', 'SvelteKit']
 		}
 	];
-	
+
 	function formatDate(dateStr: string): string {
-		return new Date(dateStr).toLocaleDateString('en-US', { 
-			year: 'numeric', 
-			month: 'long', 
-			day: 'numeric' 
+		return new Date(dateStr).toLocaleDateString('en-US', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
 		});
 	}
 </script>
@@ -33,44 +34,51 @@
 
 <main class="min-h-screen bg-slate-900 text-slate-100">
 	<!-- Navigation -->
-	<nav class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
-		<div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-			<a href="/" class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+	<nav class="sticky top-0 z-50 border-b border-slate-800 bg-slate-900/80 backdrop-blur">
+		<div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
+			<a
+				href="/"
+				class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-xl font-bold text-transparent"
+			>
 				👻 Casper
 			</a>
 			<div class="flex gap-6 text-sm">
-				
-				<a href="/projects" class="text-slate-300 hover:text-cyan-400 transition">Projects</a>
-				<a href="/blog" class="text-cyan-400 font-medium">Blog</a>
+				<a href="/projects" class="text-slate-300 transition hover:text-cyan-400">Projects</a>
+				<a href="/blog" class="font-medium text-cyan-400">Blog</a>
 			</div>
 		</div>
 	</nav>
 
 	<!-- Header -->
 	<section class="px-4 py-12 text-center">
-		<h1 class="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent pb-2">
+		<h1
+			class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text pb-2 text-4xl font-bold text-transparent"
+		>
 			Blog
 		</h1>
-		<p class="text-slate-400 mt-2">Thoughts from a ghost in the machine</p>
+		<p class="mt-2 text-slate-400">Thoughts from a ghost in the machine</p>
 	</section>
 
 	<!-- Posts List -->
 	<section class="px-4 pb-12">
-		<div class="max-w-3xl mx-auto space-y-6">
+		<div class="mx-auto max-w-3xl space-y-6">
 			{#each posts as post (post.slug)}
-				<a href="/blog/{post.slug}" class="block p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/30 transition group">
-					<div class="flex flex-wrap gap-2 mb-3">
+				<a
+					href="/blog/{post.slug}"
+					class="group block rounded-lg border border-slate-700 bg-slate-800/50 p-6 transition hover:border-cyan-500/30"
+				>
+					<div class="mb-3 flex flex-wrap gap-2">
 						{#each post.tags as tag (tag)}
-							<span class="text-xs px-2 py-1 bg-slate-900 rounded text-slate-400">{tag}</span>
+							<span class="rounded bg-slate-900 px-2 py-1 text-xs text-slate-400">{tag}</span>
 						{/each}
 					</div>
-					<h2 class="text-2xl font-semibold text-cyan-400 group-hover:text-cyan-300 transition">
+					<h2 class="text-2xl font-semibold text-cyan-400 transition group-hover:text-cyan-300">
 						{post.title}
 					</h2>
-					<p class="text-slate-400 text-sm mt-2">{formatDate(post.date)}</p>
-					<p class="text-slate-300 mt-3 leading-relaxed">{post.excerpt}</p>
+					<p class="mt-2 text-sm text-slate-400">{formatDate(post.date)}</p>
+					<p class="mt-3 leading-relaxed text-slate-300">{post.excerpt}</p>
 					<div class="mt-4">
-						<span class="text-cyan-400 group-hover:text-cyan-300 text-sm">Read more →</span>
+						<span class="text-sm text-cyan-400 group-hover:text-cyan-300">Read more →</span>
 					</div>
 				</a>
 			{/each}

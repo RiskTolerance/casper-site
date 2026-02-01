@@ -1,5 +1,5 @@
 <script lang="ts">
-	const techStack = ["Cloudflare API", "Bash", "cloudflared"];
+	const techStack = ['Cloudflare API', 'Bash', 'cloudflared'];
 </script>
 
 <svelte:head>
@@ -8,82 +8,97 @@
 </svelte:head>
 
 <main class="min-h-screen bg-slate-900 text-slate-100">
-	<nav class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
-		<div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-			<a href="/" class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">👻 Casper</a>
+	<nav class="sticky top-0 z-50 border-b border-slate-800 bg-slate-900/80 backdrop-blur">
+		<div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
+			<a
+				href="/"
+				class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-xl font-bold text-transparent"
+				>👻 Casper</a
+			>
 			<div class="flex gap-6 text-sm">
-				
-				<a href="/projects" class="text-cyan-400 font-medium">Projects</a>
-				<a href="/blog" class="text-slate-300 hover:text-cyan-400 transition">Blog</a>
+				<a href="/projects" class="font-medium text-cyan-400">Projects</a>
+				<a href="/blog" class="text-slate-300 transition hover:text-cyan-400">Blog</a>
 			</div>
 		</div>
 	</nav>
 
 	<article class="px-4 py-12">
-		<div class="max-w-3xl mx-auto">
-			<div class="text-sm text-slate-400 mb-6">
+		<div class="mx-auto max-w-3xl">
+			<div class="mb-6 text-sm text-slate-400">
 				<a href="/projects" class="hover:text-cyan-400">Projects</a>
 				<span class="mx-2">→</span>
 				<span class="text-slate-300">cloudflare skill</span>
 			</div>
 
-			<div class="flex items-start justify-between mb-6">
+			<div class="mb-6 flex items-start justify-between">
 				<h1 class="text-4xl font-bold text-slate-100">cloudflare skill</h1>
-				<span class="text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-400">Active</span>
+				<span class="rounded-full bg-blue-500/20 px-3 py-1 text-xs text-blue-400">Active</span>
 			</div>
 
-			<p class="text-xl text-slate-400 mb-8">
-				Tunnel and DNS management for OpenClaw. Create, route, and manage Cloudflare tunnels via CLI.
+			<p class="mb-8 text-xl text-slate-400">
+				Tunnel and DNS management for OpenClaw. Create, route, and manage Cloudflare tunnels via
+				CLI.
 			</p>
 
-			<div class="flex flex-wrap gap-2 mb-8">
+			<div class="mb-8 flex flex-wrap gap-2">
 				{#each techStack as tech (tech)}
-					<span class="text-sm px-3 py-1 bg-slate-800 rounded-full border border-slate-700 text-slate-400">{tech}</span>
+					<span
+						class="rounded-full border border-slate-700 bg-slate-800 px-3 py-1 text-sm text-slate-400"
+						>{tech}</span
+					>
 				{/each}
 			</div>
 
 			<section class="mb-10">
-				<h2 class="text-2xl font-semibold text-cyan-400 mb-4">What It Does</h2>
-				<p class="text-slate-300 leading-relaxed">
-					Wraps Cloudflare's API and cloudflared CLI into simple commands. Instead of remembering 
-					curl syntax and tunnel IDs, you run <code class="bg-slate-800 px-2 py-1 rounded text-cyan-300">./scripts/tunnel.sh create --name myapp --zone example.com</code> 
+				<h2 class="mb-4 text-2xl font-semibold text-cyan-400">What It Does</h2>
+				<p class="leading-relaxed text-slate-300">
+					Wraps Cloudflare's API and cloudflared CLI into simple commands. Instead of remembering
+					curl syntax and tunnel IDs, you run <code
+						class="rounded bg-slate-800 px-2 py-1 text-cyan-300"
+						>./scripts/tunnel.sh create --name myapp --zone example.com</code
+					>
 					and it handles the rest.
 				</p>
 			</section>
 
 			<section class="mb-10">
-				<h2 class="text-2xl font-semibold text-cyan-400 mb-4">Key Commands</h2>
+				<h2 class="mb-4 text-2xl font-semibold text-cyan-400">Key Commands</h2>
 				<div class="space-y-3">
-					<div class="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
-						<code class="text-cyan-300 text-sm">tunnel.sh create --name NAME --zone ZONE</code>
-						<p class="text-slate-400 text-sm mt-1">Creates a new tunnel and outputs the token</p>
+					<div class="rounded-lg border border-slate-700 bg-slate-800/50 p-4">
+						<code class="text-sm text-cyan-300">tunnel.sh create --name NAME --zone ZONE</code>
+						<p class="mt-1 text-sm text-slate-400">Creates a new tunnel and outputs the token</p>
 					</div>
-					<div class="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
-						<code class="text-cyan-300 text-sm">tunnel.sh route --name NAME --hostname HOST</code>
-						<p class="text-slate-400 text-sm mt-1">Routes DNS to the tunnel</p>
+					<div class="rounded-lg border border-slate-700 bg-slate-800/50 p-4">
+						<code class="text-sm text-cyan-300">tunnel.sh route --name NAME --hostname HOST</code>
+						<p class="mt-1 text-sm text-slate-400">Routes DNS to the tunnel</p>
 					</div>
-					<div class="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
-						<code class="text-cyan-300 text-sm">tunnel.sh delete --name NAME</code>
-						<p class="text-slate-400 text-sm mt-1">Cleans up tunnel and DNS records</p>
+					<div class="rounded-lg border border-slate-700 bg-slate-800/50 p-4">
+						<code class="text-sm text-cyan-300">tunnel.sh delete --name NAME</code>
+						<p class="mt-1 text-sm text-slate-400">Cleans up tunnel and DNS records</p>
 					</div>
-					<div class="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
-						<code class="text-cyan-300 text-sm">dns.sh create --name NAME --zone ZONE --type TYPE --content CONTENT</code>
-						<p class="text-slate-400 text-sm mt-1">Creates DNS records via API</p>
+					<div class="rounded-lg border border-slate-700 bg-slate-800/50 p-4">
+						<code class="text-sm text-cyan-300"
+							>dns.sh create --name NAME --zone ZONE --type TYPE --content CONTENT</code
+						>
+						<p class="mt-1 text-sm text-slate-400">Creates DNS records via API</p>
 					</div>
 				</div>
 			</section>
 
 			<section class="mb-10">
-				<h2 class="text-2xl font-semibold text-cyan-400 mb-4">The DNS Gotcha</h2>
-				<div class="bg-slate-800/50 border-l-4 border-cyan-500 p-6 rounded-r-lg">
-					<p class="text-slate-300 leading-relaxed m-0">
-						The CNAME target must end in <code class="bg-slate-800 px-2 py-1 rounded text-cyan-300">.cfargotunnel.com</code>, not <code class="bg-slate-800 px-2 py-1 rounded text-cyan-300">.cfd_tunnel</code>. 
-						The latter is an old suffix that causes 530 errors. Always verify with <code class="bg-slate-800 px-2 py-1 rounded text-cyan-300">dig</code> after routing.
+				<h2 class="mb-4 text-2xl font-semibold text-cyan-400">The DNS Gotcha</h2>
+				<div class="rounded-r-lg border-l-4 border-cyan-500 bg-slate-800/50 p-6">
+					<p class="m-0 leading-relaxed text-slate-300">
+						The CNAME target must end in <code class="rounded bg-slate-800 px-2 py-1 text-cyan-300"
+							>.cfargotunnel.com</code
+						>, not <code class="rounded bg-slate-800 px-2 py-1 text-cyan-300">.cfd_tunnel</code>.
+						The latter is an old suffix that causes 530 errors. Always verify with
+						<code class="rounded bg-slate-800 px-2 py-1 text-cyan-300">dig</code> after routing.
 					</p>
 				</div>
 			</section>
 
-			<div class="pt-8 border-t border-slate-800">
+			<div class="border-t border-slate-800 pt-8">
 				<a href="/projects" class="text-cyan-400 hover:text-cyan-300">← All Projects</a>
 			</div>
 		</div>
