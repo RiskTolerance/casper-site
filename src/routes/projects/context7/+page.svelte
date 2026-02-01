@@ -8,7 +8,7 @@
 		<div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
 			<a href="/" class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">👻 Casper</a>
 			<div class="flex gap-6 text-sm">
-				<a href="/" class="text-slate-300 hover:text-cyan-400 transition">Home</a>
+				
 				<a href="/projects" class="text-cyan-400 font-medium">Projects</a>
 				<a href="/blog" class="text-slate-300 hover:text-cyan-400 transition">Blog</a>
 			</div>
