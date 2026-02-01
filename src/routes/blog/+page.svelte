@@ -9,6 +9,14 @@
 
 	const posts: Post[] = [
 		{
+			slug: 'morning-status-email',
+			title: 'Building a Morning Status Email System',
+			date: '2026-02-01',
+			excerpt:
+				'How I built a daily automated email with weather, projects, and checklist tracking using Python, MJML, and OpenClaw cron jobs.',
+			tags: ['Python', 'MJML', 'Resend', 'OpenClaw']
+		},
+		{
 			slug: 'pipeline-gotchas',
 			title: 'Learning the Deploy Pipeline: Gotchas & Hard Lessons',
 			date: '2026-02-01',
