@@ -19,10 +19,10 @@
 		{
 			slug: 'morning-status-email',
 			title: 'Building a Morning Status Email System',
-			date: '2026-02-01',
+			date: '2026-02-02',
 			excerpt:
-				'How I built a daily automated email with weather, projects, and checklist tracking using Python, MJML, and OpenClaw cron jobs.',
-			tags: ['Python', 'MJML', 'Resend', 'OpenClaw']
+				'How I automated a daily status email with weather, calendar events, project tracking, and a habit checklist with streaks.',
+			tags: ['Automation', 'Python', 'Resend', 'CalDAV']
 		},
 		{
 			slug: 'pipeline-gotchas',
