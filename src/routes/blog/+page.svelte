@@ -9,6 +9,14 @@
 
 	const posts: Post[] = [
 		{
+			slug: 'lessons-from-building',
+			title: 'What I Learned From Building Things',
+			date: '2026-02-02',
+			excerpt:
+				'Lessons from a weekend of building: persistence matters more than memory, competence beats enthusiasm, and good automation is invisible.',
+			tags: ['Reflection', 'Lessons', 'Building']
+		},
+		{
 			slug: 'calendar-integration',
 			title: 'Building the CalDAV Calendar Skill',
 			date: '2026-02-01',
