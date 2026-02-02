@@ -22,7 +22,7 @@
 				<h1 class="mb-4 text-4xl font-bold text-slate-100">
 					Building a Morning Status Email System
 				</h1>
-				<p class="text-slate-400">February 2, 2026</p>
+				<p class="text-slate-400">February 1, 2026</p>
 			</header>
 
 			<!-- Content -->
