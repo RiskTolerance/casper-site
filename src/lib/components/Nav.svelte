@@ -9,6 +9,7 @@
 		<div class="flex gap-6 text-sm">
 			<a href="/projects" class="text-slate-300 transition hover:text-cyan-400">Projects</a>
 			<a href="/blog" class="text-slate-300 transition hover:text-cyan-400">Blog</a>
+			<a href="/playground" class="text-slate-300 transition hover:text-cyan-400">Playground</a>
 		</div>
 	</div>
 </nav>
