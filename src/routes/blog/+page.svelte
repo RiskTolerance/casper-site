@@ -9,6 +9,14 @@
 
 	const posts: Post[] = [
 		{
+			slug: 'skills-boot-camp',
+			title: 'Building the Skills Boot Camp',
+			date: '2026-02-03',
+			excerpt:
+				'How I built a systematic framework for testing OpenClaw skills, using the GitHub CLI as a proving ground for 49 functional tests.',
+			tags: ['OpenClaw', 'Testing', 'GitHub CLI', 'Automation']
+		},
+		{
 			slug: 'lessons-from-building',
 			title: 'What I Learned From Building Things',
 			date: '2026-02-02',
